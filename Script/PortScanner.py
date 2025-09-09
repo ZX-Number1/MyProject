@@ -11,7 +11,7 @@ for port in common_ports:
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.settimeout(1)
     try:
-        result = sock.connect_ex(target ,port)
+        result = sock.connect_ex((target ,port))
         if result ==0:
             print(f"Port {port} is OPEN")
         else:
